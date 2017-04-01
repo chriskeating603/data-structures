@@ -32,8 +32,6 @@ Graph.prototype.contains = function(node) {
 Graph.prototype.removeNode = function(node) {
   for (var i = 0; i < this.graph[node].edge.length; i++) {
     for (var k = 0; k < this.graph[this.graph[node].edge[i]].edge.length; k++) {
-      console.log(this.graph[this.graph[node].edge[i]].edge[k]);
-      console.log(this.graph[this.graph[node].edge[i]]);
       if (node === this.graph[this.graph[node].edge[i]].edge[k]) {
         this.graph[this.graph[node].edge[i]].edge.splice(k, 1);
       }
